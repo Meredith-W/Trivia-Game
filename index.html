@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>trivia</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+<div class="wrapper">
+	<div class="welcome">
+		<h1>Welcome to  Subjective Trivia</h1>
+		<p>Answer the following subjective questions in 5 seconds.</p>
+		<button id="start"><h2>Start!</h2></button>	
+	</div>
+
+	<div class="questions">
+			
+			<div class="qfirst">
+				<h3>Pigs develop wings after 10 months of age.</h3>
+				<button><h5 id="choiceA">True</h5></button>
+				<button><h5 id="choiceB">False</h5></button>
+			</div>	
+			<div class="qsecond">
+				<h3>Cats haaaate people.</h3>
+				<button><h5 id="choiceC">True</h5></button>
+				<button><h5 id="choiceD">False</h5></button>
+			</div>
+			<div class="qthird">			
+				<h3>Elephants are better than dogs.</h3>
+				<button><h5 id="choiceE">True</h5></button>
+				<button><h5 id="choiceF">False</h5></button>
+			</div>
+	</div>
+			<div id="score">
+			<h3></h3>
+			</div>
+</div>
+
+<script type="text/javascript">
+
+var userScore= 0;
+
+
+/*var logic= function(){
+	if ('.qfirst' == '#choiceB'){
+		userScore= userScore + 1;
+	}
+	if ( '.qsecond'== '#choiceC'){
+		userScore= userScore + 1;
+	}
+	if ('.qsecond' == '#choiceF'){
+	userScore= userScore + 1;	
+	}	
+	else {
+	userScore= userScore+ 0;
+	}*/
+
+$(document).ready(function(){
+
+	       $('#start').click(function (){
+			$('.welcome').replaceWith($('.questions'));
+			});
+			    setTimeout(function(){
+        	$('#score').html(userScore +' right answers out of 3.');
+			},5000);
+				   })
+
+	
+		    				   
+
+
+
+
+</script>
+</body>
+</html>
